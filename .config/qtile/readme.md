@@ -1,0 +1,1 @@
+qtile's configrurarion based on https://github.com/antoniosarosi/dotfiles/tree/master/.config/qtile
