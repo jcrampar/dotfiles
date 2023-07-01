@@ -165,4 +165,8 @@ alias config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
    fastfetch --load-config neofetch
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> ae7206e (add fish directory)
