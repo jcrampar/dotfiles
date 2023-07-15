@@ -4,9 +4,9 @@
 
 # Qtile workspaces
 
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, ScratchPad, DropDown
 from libqtile.command import lazy
-from .keys import mod, keys
+from .keys import mod, keys, TERMINAL
 
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -32,3 +32,13 @@ for i, group in enumerate(groups):
         # Send window to workspace N
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
+
+groups.append(
+    ScratchPad(
+        'scratchpad', [
+            DropDown('term', TERMINAL , width=0.8, height=0.7, x=0.1, y=0.1, opacity=0.9),
+            DropDown('khal', TERMINAL + ' --hold -e khal calendar', width=0.8, height=0.7, x=0.1, y=0.1, opacity=0.9),
+            DropDown('fm', 'pcmanfm', width=0.8, height=0.7, x=0.1, y=0.1, opacity=0.9),
+        ]
+    )
+)

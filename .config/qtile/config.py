@@ -22,7 +22,8 @@ import subprocess
 
 @hook.subscribe.startup_once
 def autostart():
-    subprocess.call([path.join(qtile_path, 'autostart.sh')])
+    home = path.expanduser('~')
+    subprocess.Popen([home + '/.config/qtile/scripts/autostart.sh'])
 
 
 main = None
