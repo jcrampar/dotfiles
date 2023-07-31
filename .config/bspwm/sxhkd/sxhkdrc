@@ -84,7 +84,11 @@ super + x
 #Show power menu
 super + p
 <<<<<<< HEAD
+<<<<<<< HEAD
 	~/.config/rofi/powermenu/type-5/powermenu.sh
+=======
+	/home/juanc/.local/bin/powermenu.sh
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 	/home/juanc/.local/bin/powermenu.sh
 >>>>>>> f042f8e (Add initial bspwm)
@@ -98,9 +102,15 @@ super + v
     pavucontrol
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # #Pragha
 # super + m
 #     pragha
+=======
+#Pragha
+super + m
+    pragha
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 #Pragha
 super + m
@@ -125,9 +135,15 @@ super + KP_Enter
 ##
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # #Rofi theme selector
 # super + r
 #     rofi-theme-selector
+=======
+#Rofi theme selector
+super + r
+    rofi-theme-selector
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 #Rofi theme selector
 super + r
@@ -350,6 +366,10 @@ Print
     #scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 
 >>>>>>> f042f8e (Add initial bspwm)
@@ -359,6 +379,12 @@ ctrl + Print
     flameshot gui
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#Gnome-Screenshot
+ctrl + shift + Print
+     gnome-screenshot -i
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 #Gnome-Screenshot
 ctrl + shift + Print
@@ -477,7 +503,11 @@ super + bracket{left,right}
 # set the window state
 super + space
 <<<<<<< HEAD
+<<<<<<< HEAD
 	bspc node -t {tiled,floating}
+=======
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+>>>>>>> f042f8e (Add initial bspwm)
 =======
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 >>>>>>> f042f8e (Add initial bspwm)
