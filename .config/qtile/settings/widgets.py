@@ -76,6 +76,7 @@ primary_widgets = [
     *workspaces(),
 
 
+    widget.KhalCalendar(**base(bg='color1'), **power_line_arrow_right()),
 
     icon(bg="color4", text=''),  # Icon: nf-oct-cpu
 
