@@ -6,12 +6,9 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Redshift
+# Vivaldi
 super + F1
-	redshift -m randr -P -O 4300
-
-super + shift + F1
-    redshift -x
+	vivaldi-stable
 
 # Atom
 super + F2
@@ -67,7 +64,7 @@ super + e
 
 #Browser
 super + w
-    ~/.config/rofi/scripts/launcher.sh --show window --type 6 --style 1
+    vivaldi-stable
 
 #Conky-toggle
 super + c
@@ -81,31 +78,21 @@ super + h
 super + x
     archlinux-logout
 
-#Show power menu
-super + p
-<<<<<<< HEAD
-	~/.config/rofi/powermenu/type-5/powermenu.sh
-=======
-	/home/juanc/.local/bin/powermenu.sh
->>>>>>> f042f8e (Add initial bspwm)
+#Rofi theme selector
+super + r
+    rofi-theme-selector
 
-#Show date time
+#Urxvt
 super + t
-    /home/juanc/.local/bin/showdatenotification.sh
+    urxvt
 
 #Pavucontrol
 super + v
     pavucontrol
 
-<<<<<<< HEAD
-# #Pragha
-# super + m
-#     pragha
-=======
 #Pragha
 super + m
     pragha
->>>>>>> f042f8e (Add initial bspwm)
 
 #alacritty
 super + Return
@@ -120,27 +107,6 @@ super + Escape
 super + KP_Enter
 	alacritty
 
-##
-# ROFI
-##
-
-<<<<<<< HEAD
-# #Rofi theme selector
-# super + r
-#     rofi-theme-selector
-=======
-#Rofi theme selector
-super + r
-    rofi-theme-selector
->>>>>>> f042f8e (Add initial bspwm)
-
-#rofi
-super + d
-    ~/.config/rofi/scripts/launcher.sh --show drun --type 6 --style 1
-    #rofi -show drun
-    
-    
-
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
@@ -154,9 +120,13 @@ super + shift + Return
 #super + shift + KP_Enter
 #	thunar
 
+#dmenu
+super + shift + d
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
-
-
+#dmenu
+super + d
+    ~/.config/bspwm/launcher/launcher.sh
 
 #reload sxhkd:
 super + shift + s
@@ -346,24 +316,15 @@ ctrl + shift + Escape
 
 #Scrot
 Print
-    flameshot gui
-    #scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-    
-<<<<<<< HEAD
-=======
+    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
->>>>>>> f042f8e (Add initial bspwm)
 #screeenshooter
 ctrl + Print
-    xfce4-screenshooter
-    flameshot gui
+     xfce4-screenshooter
 
-<<<<<<< HEAD
-=======
 #Gnome-Screenshot
 ctrl + shift + Print
      gnome-screenshot -i
->>>>>>> f042f8e (Add initial bspwm)
 
 
 #################################################################
@@ -381,16 +342,15 @@ F12
 
 #Raises volume
 XF86AudioRaiseVolume
-    sh ~/.local/bin/changevolume.sh up
+    amixer -D pulse set Master 10%+
 
 #Lowers volume
 XF86AudioLowerVolume
-    sh ~/.local/bin/changevolume.sh down
+    amixer -D pulse set Master 10%-
 
 #Mute
 XF86AudioMute
-    sh ~/.local/bin/changevolume.sh mute
-
+    amixer -D pulse set Master 1+ toggle
 
 #Playerctl works for Pragha, Spotify and others
 #Delete the line for playerctl if you want to use mpc
@@ -455,7 +415,9 @@ ctrl + alt + o
 super + f
 	bspc node --state \~fullscreen
 
-
+# Toggle pseudo tiling of window
+super + p
+	bspc node --state \~pseudo_tiled
 
 #kill
 super + q
@@ -467,8 +429,7 @@ super + q
 
 #Focus selected desktop
 super + Tab
-	bspc desktop -f '^{1-9,10}'; \
-    ~/.local/bin/showworkspace.sh
+	bspc desktop -f '^{1-9,10}'
 
 # Increase/decrease window gap on focused desktop
 super + bracket{left,right}
@@ -476,11 +437,7 @@ super + bracket{left,right}
 
 # set the window state
 super + space
-<<<<<<< HEAD
-	bspc node -t {tiled,floating}
-=======
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
->>>>>>> f042f8e (Add initial bspwm)
 
 # Move focus to other monitor
 super + BackSpace
@@ -493,11 +450,6 @@ super + BackSpace
 # Move floating window
 super + alt + {_,shift + }{Left,Down,Up,Right}
 	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
-
-# Toogle scratchpad terminal
-super + alt + Return
-    ~/.local/bin/scratchpad.sh 
-
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -528,10 +480,6 @@ super + shift + q
 super + {_,shift + }{h,j,k,l}
 	bspc node --{focus,swap} {west,south,north,east}
 
-# Focus/swap windows by direction
-super + {Left,Down,Up,Right}
-	bspc node --{focus} {west,south,north,east}
-
 # Flip layout vertically/horizontally
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
@@ -556,9 +504,12 @@ super + shift + Down
 # SUPER + CONTROL KEYS
 #################################################################
 
+# Focus/swap windows by direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node --{focus} {west,south,north,east}
 
 # Contract tiled space
-super + ctrl + {Left,Down,Up,Right}
+super + ctrl + {h,j,k,l}
 	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 # Focus parent/brother/first/second for preselection
@@ -580,13 +531,11 @@ super + ctrl + {_,shift +}{1-9}
 
 #Focus selected desktop
 alt + Tab
-	bspc desktop -f '^{1-9,10}'; \
-    ~/.local/bin/showworkspace.sh
+	bspc desktop -f '^{1-9,10}'
 
 	#Focus selected desktop
 alt + shift + Tab
-	bspc desktop -f '^{1-9,10}'; \
-    ~/.local/bin/showworkspace.sh
+	bspc desktop -f '^{1-9,10}'
 
 #Rotate desktop
 alt + space
@@ -628,15 +577,14 @@ ctrl + alt + Down
 
 #Switch here between qwerty and azerty or make new one
 #Focus selected desktop FOR QWERTY KEYBOARDS
-super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'; \
-    ~/.local/bin/showworkspace.sh
+#super + {1-9,0}
+#	bspc desktop -f '^{1-9,10}'1323&
 
-#Focus selected desktop	FOR BELGIAN AZERTY KEYBOARDS
-#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
-#    bspc desktop -f '^{1-9,10}'
+#Focus selected desktop	FOR BELIGIAN AZERTY KEYBOARDS
+super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+    bspc desktop -f '^{1-9,10}'
 
-#Focus selected desktop	FOR FRENCH AZERTY KEYBOARDS
+#Focus selected desktop	FOR FRNECH AZERTY KEYBOARDS
 #super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 #    bspc desktop -f '^{1-9,10}'
 
@@ -644,13 +592,12 @@ super + {1-9,0}
 
 #Switch here between qwerty and azerty or make new one
 #Move window to selected desktop FOR QWERTY KEYBOARDS
-super + shift + {1-9,0}
-    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}; \
-    ~/.local/bin/showworkspace.sh
+#super + shift + {1-9,0}
+#    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #Move window to selected desktop FOR AZERTY KEYBOARDS
-#super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
-#    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #################################################################
 
