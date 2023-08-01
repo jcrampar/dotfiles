@@ -83,7 +83,7 @@ super + x
 
 #Show power menu
 super + p
-	/home/juanc/.local/bin/powermenu.sh
+	~/.config/rofi/powermenu/type-5/powermenu.sh
 
 #Show date time
 super + t
