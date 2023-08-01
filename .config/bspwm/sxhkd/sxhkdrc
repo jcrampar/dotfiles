@@ -85,6 +85,7 @@ super + x
 super + p
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	~/.config/rofi/powermenu/type-5/powermenu.sh
 =======
 	/home/juanc/.local/bin/powermenu.sh
@@ -92,6 +93,9 @@ super + p
 =======
 	/home/juanc/.local/bin/powermenu.sh
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+	~/.config/rofi/powermenu/type-5/powermenu.sh
+>>>>>>> a83d3a3 (Edit sxhkdrc)
 
 #Show date time
 super + t
