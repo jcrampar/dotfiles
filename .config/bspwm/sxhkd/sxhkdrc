@@ -93,9 +93,9 @@ super + t
 super + v
     pavucontrol
 
-#Pragha
-super + m
-    pragha
+# #Pragha
+# super + m
+#     pragha
 
 #alacritty
 super + Return
@@ -114,9 +114,9 @@ super + KP_Enter
 # ROFI
 ##
 
-#Rofi theme selector
-super + r
-    rofi-theme-selector
+# #Rofi theme selector
+# super + r
+#     rofi-theme-selector
 
 #rofi
 super + d
@@ -333,15 +333,11 @@ Print
     flameshot gui
     #scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
     
-
 #screeenshooter
 ctrl + Print
     xfce4-screenshooter
     flameshot gui
 
-#Gnome-Screenshot
-ctrl + shift + Print
-     gnome-screenshot -i
 
 
 #################################################################
@@ -454,7 +450,7 @@ super + bracket{left,right}
 
 # set the window state
 super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,floating}
 
 # Move focus to other monitor
 super + BackSpace
