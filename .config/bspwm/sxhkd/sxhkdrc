@@ -107,6 +107,7 @@ super + v
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # #Pragha
 # super + m
 #     pragha
@@ -120,6 +121,11 @@ super + m
 super + m
     pragha
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+# #Pragha
+# super + m
+#     pragha
+>>>>>>> 815353d (Edit sxhkdrc)
 
 #alacritty
 super + Return
@@ -140,6 +146,7 @@ super + KP_Enter
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # #Rofi theme selector
 # super + r
 #     rofi-theme-selector
@@ -153,6 +160,11 @@ super + r
 super + r
     rofi-theme-selector
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+# #Rofi theme selector
+# super + r
+#     rofi-theme-selector
+>>>>>>> 815353d (Edit sxhkdrc)
 
 #rofi
 super + d
@@ -371,12 +383,15 @@ Print
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> f042f8e (Add initial bspwm)
 =======
 
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+>>>>>>> 815353d (Edit sxhkdrc)
 #screeenshooter
 ctrl + Print
     xfce4-screenshooter
@@ -384,6 +399,7 @@ ctrl + Print
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #Gnome-Screenshot
 ctrl + shift + Print
@@ -394,6 +410,8 @@ ctrl + shift + Print
 ctrl + shift + Print
      gnome-screenshot -i
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+>>>>>>> 815353d (Edit sxhkdrc)
 
 
 #################################################################
@@ -508,6 +526,7 @@ super + bracket{left,right}
 super + space
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	bspc node -t {tiled,floating}
 =======
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -515,6 +534,9 @@ super + space
 =======
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 >>>>>>> f042f8e (Add initial bspwm)
+=======
+	bspc node -t {tiled,floating}
+>>>>>>> 815353d (Edit sxhkdrc)
 
 # Move focus to other monitor
 super + BackSpace
