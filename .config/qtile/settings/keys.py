@@ -9,21 +9,22 @@ from libqtile.command import lazy
 
 
 mod = "mod4"
+ALTGR = "mod5"
 TERMINAL = "alacritty"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
-    
+
     # ------------ Window Configs ------------
 
     # Switch between windows in current stack pane
-    ([mod], "j", lazy.layout.down()),
-    ([mod], "k", lazy.layout.up()),
-    ([mod], "h", lazy.layout.left()),
-    ([mod], "l", lazy.layout.right()),
+    ([mod], "Down", lazy.layout.down()),
+    ([mod], "Up", lazy.layout.up()),
+    ([mod], "Left", lazy.layout.left()),
+    ([mod], "Right", lazy.layout.right()),
 
     # Change window sizes 
-    ([mod, "shift"], "l", lazy.layout.grow()),
-    ([mod, "shift"], "h", lazy.layout.shrink()),
+    ([mod, "shift"], "Right", lazy.layout.grow()),
+    ([mod, "shift"], "Left", lazy.layout.shrink()),
     ([mod, "shift"], "n", lazy.layout.normalize()),
 
     # Toggle floating
@@ -53,19 +54,31 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "d", lazy.spawn("rofi -show drun")),
 
+    
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    ([mod], "r", lazy.spawn("rofi -show")),
+
+    # rofi calc
+    ([mod], "c", lazy.spawn("rofi -show calc")),
+
+    # rofi emoji
+    ([ALTGR], "e", lazy.spawn("rofi -show emoji")),
 
     # Browser
     ([mod], "b", lazy.spawn("brave")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], 'f', lazy.group['scratchpad'].dropdown_toggle('fm')),
 
     # Terminal
     ([mod], "Return", lazy.spawn(TERMINAL)),
+    ([mod, "control"], 'Return', lazy.group['scratchpad'].dropdown_toggle('term')),
+
+    #calendar
+    ([mod], 'k', lazy.group['scratchpad'].dropdown_toggle('khal')),
+
 
     # Redshift
     ([mod], "f1", lazy.spawn("redshift -O 2400")),
@@ -74,6 +87,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Screenshot
     ([], "Print", lazy.spawn("flameshot gui")),
     (["control"], "Print", lazy.spawn("flameshot full -p " + "/home/juanc/Pictures")),
+
+    # menu power 
+    ([ALTGR], "p", lazy.spawn("sh /home/juanc/.local/bin/powermenu.sh")),
+
 
     # ------------ Hardware Configs ------------
 
