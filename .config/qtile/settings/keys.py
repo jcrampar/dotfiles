@@ -54,7 +54,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "d", lazy.spawn("rofi -show drun")),
+    ([mod], "d", lazy.spawn("/home/juanc/.config/rofi/scripts/launcher.sh --show drun --type 6 --style 1")),
 
     
     # Window Nav
