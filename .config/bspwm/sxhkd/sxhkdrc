@@ -8,7 +8,7 @@
 
 # Redshift
 super + F1
-	redshift -m randr -P -O 4300
+	redshift -m randr -P -O 3300
 
 super + shift + F1
     redshift -x
@@ -77,9 +77,9 @@ super + c
 super + h
     urxvt 'htop task manager' -e htop
 
-#archlinux-logout
-super + x
-    archlinux-logout
+# #archlinux-logout
+# super + x
+#     archlinux-logout
 
 #Show power menu
 super + p
@@ -142,7 +142,7 @@ super + shift + Return
 
 
 
-#reload sxhkd:
+#qad sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
 
@@ -432,7 +432,7 @@ super + f
 
 
 #kill
-super + q
+super + x
 	bspc node -c
 
 #################################################################
@@ -472,6 +472,7 @@ super + alt + {_,shift + }{Left,Down,Up,Right}
 # Toogle scratchpad terminal
 super + alt + Return
     ~/.local/bin/scratchpad.sh 
+
 
 
 #################################################################
