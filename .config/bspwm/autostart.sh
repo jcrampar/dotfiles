@@ -8,3 +8,4 @@ function run {
 }
 
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+run polybar &

@@ -2,17 +2,11 @@ r#
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	alacritty
 
-# program launcher
-super + @space
-	~/.config/rofi/scripts/launcher.sh --show window --type 6 --style 1
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+#################################################################
+# BSPWM 
+#################################################################
 
 #
 # bspwm hotkeys
@@ -119,3 +113,85 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+#################################################################
+# SXHKD
+#################################################################
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+# change backgroung
+super + F7
+    feh --bg-fill --no-fehbg --randomize ~/Pictures/wallpapers/all/*
+
+# file manager
+super + F8
+    thunar
+
+
+#################################################################
+# SUPER + ... KEYS
+#################################################################
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+super + @space
+	~/.config/rofi/scripts/launcher.sh --show window --type 6 --style 1
+
+
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+
+
+#################################################################
+# SUPER + ALT KEYS
+#################################################################
+
+
+
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#Scrot
+Print
+    flameshot gui
+
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    sh ~/.config/bspwm/scripts/changevolume.sh up
+
+#Lowers volume
+XF86AudioLowerVolume
+    sh ~/.config/bspwm/scripts/changevolume.sh down
+
+#Mute
+XF86AudioMute
+    sh ~/.config/bspwm/scripts/changevolume.sh mute
