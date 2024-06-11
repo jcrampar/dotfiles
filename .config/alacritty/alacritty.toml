@@ -16,3 +16,6 @@ style = "Italic"
 [font.normal]
 family = "ComicShannsMono Nerd Font"
 style = "Regular"
+
+[shell]
+program="/usr/bin/fish"
