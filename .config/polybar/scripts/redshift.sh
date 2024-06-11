@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#env.sh file content
+# export REDSHIFT=on
+# export REDSHIFT_TEMP=3200
+
 envFile=~/.config/polybar/scripts/env.sh
 changeValue=300
 
