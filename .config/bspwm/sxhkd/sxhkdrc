@@ -147,10 +147,17 @@ super + F8
 super + Return
 	alacritty
 
+#
+# rofi
+#
+
 # program launcher
 super + @space
-	~/.config/rofi/scripts/launcher.sh --show window --type 6 --style 1
+	~/.config/rofi/scripts/launcher.sh
 
+# clipboard history
+super + v
+	~/.config/rofi/scripts/greenclip.sh
 
 
 #################################################################
