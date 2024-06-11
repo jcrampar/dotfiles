@@ -10,3 +10,4 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 export $(envsubst < .env)
+eval "$(starship init bash)"
