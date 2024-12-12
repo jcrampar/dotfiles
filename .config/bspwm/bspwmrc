@@ -73,3 +73,5 @@ dunstctl reload "${HOME}"/.config/bspwm/config/dunst/dunstrc
 
 # Launch feh for wallpapers
 feh --bg-fill --no-fehbg --randomize ~/Pictures/wallpapers/all/*
+
+redshift -c "${HOME}"/.config/redshift/redshift.conf
