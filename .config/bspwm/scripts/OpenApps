@@ -41,9 +41,6 @@ case "$1" in
         ;;
 esac
 
-/home/juanc/.config/bspwm/config/rofi-themes/Clipboard.rasi
-
-
 
 # case "$1" in
 #     --menu)
