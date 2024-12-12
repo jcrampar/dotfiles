@@ -2,7 +2,9 @@
 
 ## Dependencies
 
-sudo pacman -S feh xclip dunst pamixer ueberzug rofi rustup pamixer picom 
+chaotic aur
+
+sudo pacman -S feh xclip dunst pamixer ueberzug rofi rustup pamixer picom microsoft-edge-stable-bin visual-studio-code-bin eww
 
 ## usefull commands
 
