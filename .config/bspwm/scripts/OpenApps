@@ -13,7 +13,7 @@ WIDGET_DIR="$HOME/.config/bspwm/config/eww"
 
 case "$1" in
     --menu)
-        rofi -show drun -theme "$HOME"/.config/bspwm/config/rofi-themes/Launcher.rasi
+        rofi -show drun -theme "$HOME"/.config/bspwm/config/rofi-themes/Launcher.rasi -icon-theme "Papirus" -show-icons
         ;;
     --terminal)
         Term --terminal
@@ -35,6 +35,9 @@ case "$1" in
         ;;
 	--bluetooth)
 		rofi-bluetooth
+		;;
+	--screenshot)
+		flameshot gui
 		;;
     *)
         echo "Invalid Option"
