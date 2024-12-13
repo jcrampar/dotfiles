@@ -5,12 +5,12 @@
 #  ██╔══██║██╔═══╝ ██╔═══╝ ╚════██║    ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
 #  ██║  ██║██║     ██║     ███████║    ███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
 #  ╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-#	Script to control prefered apps to launch for all themes
-#	Author: z0mbi3
-#	url:    https://github.com/gh0stzk/dotfiles
+#   Script to control prefered apps to launch for all themes
+#   Author: z0mbi3
+#   url:    https://github.com/gh0stzk/dotfiles
 
 WIDGET_DIR="$HOME/.config/bspwm/config/eww"
-
+eww -c $HOME/.config/bspwm/config/eww open --toggle date
 case "$1" in
     --menu)
         rofi -show drun -theme "$HOME"/.config/bspwm/config/rofi-themes/Launcher.rasi -icon-theme "Papirus" -show-icons
@@ -24,21 +24,21 @@ case "$1" in
     --calendar)
         eww -c "$WIDGET_DIR" open --toggle date
         ;;
-	--clipboard)
-		rofi -modi "clipboard:greenclip print" -theme "$HOME"/.config/bspwm/config/rofi-themes/Clipboard.rasi -show clipboard -run-command '{cmd}'
-		;;
+    --clipboard)
+        rofi -modi "clipboard:greenclip print" -theme "$HOME"/.config/bspwm/config/rofi-themes/Clipboard.rasi -show clipboard -run-command '{cmd}'
+        ;;
     --browser)
         firefox
         ;;
     --soundcontrol)
         pavucontrol
         ;;
-	--bluetooth)
-		rofi-bluetooth
-		;;
-	--screenshot)
-		flameshot gui
-		;;
+    --bluetooth)
+        rofi-bluetooth
+        ;;
+    --screenshot)
+        flameshot gui
+        ;;
     *)
         echo "Invalid Option"
         ;;
@@ -65,26 +65,26 @@ esac
 #         Term --checkupdates
 #         ;;
 #     --netmanager)
-# 		NetManagerDM
-# 		;;
-# 	--bluetooth)
-# 		rofi-bluetooth
-# 		;;
-# 	--clipboard)
-# 		rofi -modi "clipboard:greenclip print" -theme "$HOME"/.config/bspwm/src/rofi-themes/Clipboard.rasi -show clipboard -run-command '{cmd}'
-# 		;;
-# 	--screenshot)
-# 		ScreenShoTer
-# 		;;
-# 	--powermenu)
+#         NetManagerDM
+#         ;;
+#     --bluetooth)
+#         rofi-bluetooth
+#         ;;
+#     --clipboard)
+#         rofi -modi "clipboard:greenclip print" -theme "$HOME"/.config/bspwm/src/rofi-themes/Clipboard.rasi -show clipboard -run-command '{cmd}'
+#         ;;
+#     --screenshot)
+#         ScreenShoTer
+#         ;;
+#     --powermenu)
 #         PowerMenu
 #         ;;
 #     --android)
-# 		AndroidMount
-# 		;;
-# 	--keyboard)
-# 		KeyBoardL
-# 		;;
+#         AndroidMount
+#         ;;
+#     --keyboard)
+#         KeyBoardL
+#         ;;
 #     --yazi)
 #         Term --yazi
 #         ;;
@@ -118,8 +118,8 @@ esac
 #         ;;
 #         # Eww Widgets
 #     --KeyHelp)
-# 		eww -c "$WIDGET_DIR" open --toggle csheet
-# 		;;
+#       eww -c "$WIDGET_DIR" open --toggle csheet
+#         ;;
 #     --usercard)
 #         eww -c "$WIDGET_DIR" open --toggle launchermenu
 #         ;;
