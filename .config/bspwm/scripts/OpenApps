@@ -10,7 +10,7 @@
 #   url:    https://github.com/gh0stzk/dotfiles
 
 WIDGET_DIR="$HOME/.config/bspwm/config/eww"
-eww -c $HOME/.config/bspwm/config/eww open --toggle date
+
 case "$1" in
     --menu)
         rofi -show drun -theme "$HOME"/.config/bspwm/config/rofi-themes/Launcher.rasi -icon-theme "Papirus" -show-icons
